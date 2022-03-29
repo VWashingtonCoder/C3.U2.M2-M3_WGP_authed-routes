@@ -4,19 +4,21 @@ const initialFormValues = { title: '', text: '', topic: '' }
 
 export default function ArticleForm(props) {
   const [values, setValues] = useState(initialFormValues)
+  const { onSubmit } = props
 
   const onChange = evt => {
     const { id, value } = evt.target
     setValues({ ...values, [id]: value })
   }
 
-  const onSubmit = evt => {
+  const submit = evt => {
     evt.preventDefault()
-
+    onSubmit(values)
+    setValues(initialFormValues)
   }
 
   return (
-    <form id="form" onSubmit={onSubmit}>
+    <form id="form" onSubmit={submit}>
       <h2>Create Article</h2>
       <input
         maxLength={50}

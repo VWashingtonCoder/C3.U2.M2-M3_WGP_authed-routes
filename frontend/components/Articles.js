@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Navigate } from 'react-router-dom'
 
 export default function Articles(props) {
-  const { articles } = props
+  const { articles, banana } = props
+
+  if (!window.localStorage.getItem('token')) {
+    return <Navigate to="/" />
+  }
+
+  useEffect(() => {
+    banana()
+  }, [])
 
   return (
     <div className="articles">

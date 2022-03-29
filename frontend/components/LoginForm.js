@@ -7,6 +7,7 @@ const initialFormValues = {
 
 export default function LoginForm(props) {
   const [values, setValues] = useState(initialFormValues)
+  const { login } = props
 
   const onChange = evt => {
     const { id, value } = evt.target
@@ -15,7 +16,7 @@ export default function LoginForm(props) {
 
   const onSubmit = evt => {
     evt.preventDefault()
-
+    login(values)
   }
 
   return (
