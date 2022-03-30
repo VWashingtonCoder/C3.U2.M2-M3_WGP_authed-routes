@@ -60,7 +60,9 @@ export default function App() {
     axiosWithAuth().delete(`${articlesUrl}/${article_id}`)
       .then(res => {
         setMessage(res.data.message)
-        setArticles()
+        setArticles(articles.filter(art => {
+          return !art.
+        }))
       })
       .catch(err => {
         debugger
