@@ -75,7 +75,7 @@ export default function App() {
     axiosWithAuth().put(`${articlesUrl}/${article_id}`, changes)
       .then(res => {
         setArticles(articles.map(art => {
-          return art.article_id
+          return art.article_id === article_id
             ? res.data.article
             : art
         }))
