@@ -51,6 +51,7 @@ export default function App() {
   }
 
   const postArticle = article => {
+    setFetching(true)
     axiosWithAuth().post(articlesUrl, article)
       .then(res => {
         setArticles([...articles, res.data.article])
@@ -64,6 +65,7 @@ export default function App() {
   }
 
   const deleteArticle = article_id => {
+    setFetching(true)
     axiosWithAuth().delete(`${articlesUrl}/${article_id}`)
       .then(res => {
         setMessage(res.data.message)
@@ -74,9 +76,13 @@ export default function App() {
       .catch(err => {
         setMessage(err?.response?.data?.message)
       })
+      .finally(() => {
+        setFetching(false)
+      })
   }
 
   const putArticle = article => {
+    setFetching(true)
     const { article_id, ...changes } = article
     axiosWithAuth().put(`${articlesUrl}/${article_id}`, changes)
       .then(res => {
@@ -90,6 +96,9 @@ export default function App() {
       })
       .catch(err => {
         setMessage(err?.response?.data?.message)
+      })
+      .finally(() => {
+        setFetching(false)
       })
   }
 
