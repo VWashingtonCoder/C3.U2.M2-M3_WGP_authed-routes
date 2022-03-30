@@ -57,11 +57,11 @@ export default function App() {
   }
 
   const deleteArticle = article_id => {
-    clog
+    console.log('deleting')
   }
 
   const putArticle = (article_id, article) => {
-
+    console.log('updating')
   }
 
   return (
