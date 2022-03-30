@@ -80,6 +80,7 @@ export default function App() {
             : art
         }))
         setMessage(res.data.message)
+        currentArticleId(null)
       })
       .catch(err => {
         setMessage(err?.response?.data?.message)
