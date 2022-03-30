@@ -57,10 +57,10 @@ export default function App() {
   }
 
   const deleteArticle = article_id => {
-
+    clog
   }
 
-  const putArticle = (article_id, changes) => {
+  const putArticle = (article_id, article) => {
 
   }
 
