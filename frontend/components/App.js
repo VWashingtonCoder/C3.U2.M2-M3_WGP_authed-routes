@@ -65,7 +65,7 @@ export default function App() {
         }))
       })
       .catch(err => {
-        debugger
+        setMessage(err?.response?.data?.message)
       })
   }
 
