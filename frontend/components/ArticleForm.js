@@ -7,11 +7,7 @@ export default function ArticleForm(props) {
   const { onSubmit, article } = props
 
   useEffect(() => {
-    if (article) {
-      setValues(article)
-    } else {
-      setValues(initialFormValues)
-    }
+    setValues(article || initialFormValues)
   }, [article])
 
   const onChange = evt => {
