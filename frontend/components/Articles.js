@@ -24,7 +24,7 @@ export default function Articles(props) {
                 <p>{art.text}</p>
                 <p>topic: {art.topic}</p>
               </div>
-              <button onClick={}>del</button>
+              <button onClick={() => deleteArticle}>del</button>
             </div>
           )
         })
