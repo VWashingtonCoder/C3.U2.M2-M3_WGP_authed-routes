@@ -61,7 +61,7 @@ export default function App() {
       .then(res => {
         setMessage(res.data.message)
         setArticles(articles.filter(art => {
-          return !art.
+          return art.article_id ==
         }))
       })
       .catch(err => {
