@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 
 export default function Articles(props) {
-  const { articles, getArticles } = props
+  const { articles, getArticles, deleteArticle } = props
 
   if (!window.localStorage.getItem('token')) {
     return <Navigate to="/" />
@@ -24,6 +24,7 @@ export default function Articles(props) {
                 <p>{art.text}</p>
                 <p>topic: {art.topic}</p>
               </div>
+              <button onClick={}>del</button>
             </div>
           )
         })
