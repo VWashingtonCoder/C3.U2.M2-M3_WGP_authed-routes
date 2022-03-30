@@ -7,7 +7,7 @@ export default function Articles(props) {
       getArticles,
       deleteArticle,
       updateArticle,
-      fetching
+      fetching,
     } = props
 
   if (!window.localStorage.getItem('token')) {
