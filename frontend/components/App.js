@@ -80,7 +80,6 @@ export default function App() {
             : art
         }))
         setMessage(res.data.message)
-        setCurrentArticleId(null)
       })
       .catch(err => {
         setMessage(err?.response?.data?.message)
@@ -90,6 +89,7 @@ export default function App() {
   const onSubmit = article => {
     if (currentArticleId) {
       putArticle(article)
+      setCurrentArticleId(null)
     } else {
       postArticle(article)
     }
