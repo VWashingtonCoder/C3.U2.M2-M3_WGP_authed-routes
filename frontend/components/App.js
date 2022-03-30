@@ -72,7 +72,13 @@ export default function App() {
 
   const putArticle = article => {
     const { article_id, ...changes } = article
-    axiosWithAuth().put(`${articlesUrl}/${article_id}`, )
+    axiosWithAuth().put(`${articlesUrl}/${article_id}`, changes)
+      .then(res => {
+        
+      })
+      .catch(err => {
+
+      })
   }
 
   const updateArticle = (article_id) => {
