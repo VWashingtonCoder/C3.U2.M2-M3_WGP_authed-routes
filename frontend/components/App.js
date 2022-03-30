@@ -56,6 +56,14 @@ export default function App() {
       })
   }
 
+  const deleteArticle = article_id => {
+
+  }
+
+  const putArticle = () => {
+    
+  }
+
   return (
     <React.StrictMode>
       <button id="logout" onClick={logout}>Logout</button>
