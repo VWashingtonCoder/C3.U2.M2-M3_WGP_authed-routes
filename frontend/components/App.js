@@ -46,7 +46,7 @@ export default function App() {
         setMessage(err?.response?.data?.message)
       })
       .finally(() => {
-        
+        setFetching(false)
       })
   }
 
@@ -57,6 +57,9 @@ export default function App() {
       })
       .catch(err => {
         setMessage(err.response.data.message)
+      })
+      .finally(() => {
+        setFetching(false)
       })
   }
 
