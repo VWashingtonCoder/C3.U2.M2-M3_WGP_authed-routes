@@ -43,7 +43,7 @@ export default function App() {
         setArticles(res.data.articles)
       })
       .catch(err => {
-        debugger
+        setMessage(err?.response?.data?.message)
       })
   }
 
@@ -77,11 +77,12 @@ export default function App() {
         setArticles(articles.map(art => {
           return art.article_id
             ? res.data.article
+            : art
         }))
         setMessage(res.data.message)
       })
       .catch(err => {
-        debugger
+        setMessage(err?.response?.data?.message)
       })
   }
 
