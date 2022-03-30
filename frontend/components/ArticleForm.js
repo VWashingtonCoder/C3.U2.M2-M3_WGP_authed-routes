@@ -7,7 +7,7 @@ export default function ArticleForm(props) {
   const { onSubmit, article } = props
 
   useEffect(() => {
-    // 
+    // arbitrary
   }, [article])
 
   const onChange = evt => {
