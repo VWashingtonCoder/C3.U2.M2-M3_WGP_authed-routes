@@ -37,14 +37,16 @@ export default function App() {
   }
 
   const getArticles = () => {
-    // we attach the token from local storage into the request
-    // Authorization header
+    setFetching(true)
     axiosWithAuth().get(articlesUrl)
       .then(res => {
         setArticles(res.data.articles)
       })
       .catch(err => {
         setMessage(err?.response?.data?.message)
+      })
+      .finally(() => {
+        
       })
   }
 
