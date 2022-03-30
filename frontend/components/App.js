@@ -89,7 +89,7 @@ export default function App() {
           <>
             <ArticleForm
               onSubmit={postArticle}
-              article={null}
+              article={articles.find(art => art.article_id === currentArticleId)}
             />
             <Articles
               deleteArticle={deleteArticle}
