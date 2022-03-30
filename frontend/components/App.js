@@ -122,6 +122,7 @@ export default function App() {
               getArticles={getArticles}
               updateArticle={updateArticle}
               articles={articles}
+              fetching={fetching}
             />
           </>
         } />
