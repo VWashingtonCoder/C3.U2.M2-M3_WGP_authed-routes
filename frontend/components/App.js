@@ -72,6 +72,7 @@ export default function App() {
 
   const putArticle = article => {
     const { article_id, ...changes } = article
+    axiosWithAuth().put(`${articlesUrl}/${article_id}`, )
   }
 
   const updateArticle = (article_id) => {
