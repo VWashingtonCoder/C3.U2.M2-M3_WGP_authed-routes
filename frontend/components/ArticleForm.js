@@ -4,7 +4,7 @@ const initialFormValues = { title: '', text: '', topic: '' }
 
 export default function ArticleForm(props) {
   const [values, setValues] = useState(initialFormValues)
-  const { onSubmit } = props
+  const { onSubmit, article } = props
 
   const onChange = evt => {
     const { id, value } = evt.target
