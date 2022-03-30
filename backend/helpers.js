@@ -151,7 +151,7 @@ async function deleteArticle(token, article_id) {
     return [422, { message: `Ouch: ${err.message}` }]
   }
   if (!articles.find(art => art.article_id == article_id)) {
-    return [401, { message: `Ouch: Article with article_id ${article_id} not found!` }]
+    return [404, { message: `Ouch: Article with article_id ${article_id} not found!` }]
   }
   articles = articles.filter(art => {
     return art.article_id != article_id
