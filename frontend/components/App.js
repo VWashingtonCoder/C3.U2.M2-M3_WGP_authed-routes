@@ -70,7 +70,11 @@ export default function App() {
       })
   }
 
-  const putArticle = (article_id) => {
+  const putArticle = article => {
+    
+  }
+
+  const updateArticle = (article_id) => {
     setCurrentArticleId(article_id)
   }
 
@@ -94,7 +98,7 @@ export default function App() {
             <Articles
               deleteArticle={deleteArticle}
               getArticles={getArticles}
-              updateArticle={putArticle}
+              updateArticle={updateArticle}
               articles={articles}
             />
           </>
