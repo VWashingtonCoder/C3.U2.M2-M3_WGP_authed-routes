@@ -81,9 +81,11 @@ export default function App() {
       })
   }
 
-  const onSubmit = () => {
+  const onSubmit = article => {
     if (currentArticleId) {
-      
+      putArticle(article)
+    } else {
+      postArticle(article)
     }
   }
 
