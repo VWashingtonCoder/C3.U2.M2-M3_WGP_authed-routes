@@ -9,6 +9,11 @@ export default function ArticleForm(props) {
   useEffect(() => {
     // if article, populate form with it
     // otherwise populate form with intial values
+    if (article) {
+      setValues(article)
+    } else {
+      setValues(initialFormValues)
+    }
   }, [article])
 
   const onChange = evt => {
