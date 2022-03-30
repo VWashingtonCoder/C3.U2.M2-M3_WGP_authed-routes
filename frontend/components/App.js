@@ -78,7 +78,11 @@ export default function App() {
         <Route path="articles" element={
           <>
             <ArticleForm onSubmit={postArticle} />
-            <Articles getArticles={getArticles} articles={articles} />
+            <Articles
+              deleteArticle={deleteArticle}
+              getArticles={getArticles}
+              articles={articles}
+            />
           </>
         } />
       </Routes>
