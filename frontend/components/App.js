@@ -70,8 +70,8 @@ export default function App() {
       })
   }
 
-  const putArticle = (article_id, article) => {
-    console.log('updating', article_id)
+  const putArticle = (article_id) => {
+    setCurrentArticleId(article_id)
   }
 
   return (
