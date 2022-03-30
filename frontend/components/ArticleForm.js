@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const initialFormValues = { title: '', text: '', topic: '' }
 
 export default function ArticleForm(props) {
   const [values, setValues] = useState(initialFormValues)
   const { onSubmit, article } = props
+
+  useEffect(() => {
+    // 
+  }, [article])
 
   const onChange = evt => {
     const { id, value } = evt.target
