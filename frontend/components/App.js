@@ -89,10 +89,10 @@ export default function App() {
   const onSubmit = article => {
     if (currentArticleId) {
       putArticle(article)
-      setCurrentArticleId(null)
     } else {
       postArticle(article)
     }
+    setCurrentArticleId(null)
   }
 
   const updateArticle = (article_id) => {
