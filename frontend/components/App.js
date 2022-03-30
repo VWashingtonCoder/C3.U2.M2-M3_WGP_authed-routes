@@ -81,6 +81,11 @@ export default function App() {
       })
   }
 
+  const onSubmit = () => {
+    // chooses between putArticle or postArticle
+    // depending on... ???????????
+  }
+
   const updateArticle = (article_id) => {
     setCurrentArticleId(article_id)
   }
