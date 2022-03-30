@@ -60,8 +60,8 @@ export default function App() {
 
   }
 
-  const putArticle = () => {
-    
+  const putArticle = (article_id, changes) => {
+
   }
 
   return (
