@@ -90,8 +90,9 @@ export default function App() {
             <Articles
               deleteArticle={deleteArticle}
               getArticles={getArticles}
+              updateArticle={putArticle}
               articles={articles}
-              />
+            />
           </>
         } />
       </Routes>
