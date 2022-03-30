@@ -71,8 +71,7 @@ export default function App() {
   }
 
   const putArticle = article => {
-    const { article_id } = article
-    const { }
+    const { article_id, ...changes } = article
   }
 
   const updateArticle = (article_id) => {
