@@ -82,8 +82,9 @@ export default function App() {
   }
 
   const onSubmit = () => {
-    // chooses between putArticle or postArticle
-    // depending on... ???????????
+    if (currentArticleId) {
+      
+    }
   }
 
   const updateArticle = (article_id) => {
