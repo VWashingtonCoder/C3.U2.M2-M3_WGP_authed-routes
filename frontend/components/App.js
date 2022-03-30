@@ -59,7 +59,7 @@ export default function App() {
   const deleteArticle = article_id => {
     axiosWithAuth().delete(`${articlesUrl}/${article_id}`)
       .then(res => {
-        debugger
+        setMessage(res.data.message)
       })
       .catch(err => {
         debugger
