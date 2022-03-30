@@ -82,7 +82,7 @@ export default function App() {
               deleteArticle={deleteArticle}
               getArticles={getArticles}
               articles={articles}
-            />
+              />
           </>
         } />
       </Routes>
