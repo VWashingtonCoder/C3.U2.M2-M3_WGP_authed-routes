@@ -47,7 +47,7 @@ export default function App() {
       })
   }
 
-  const postArticle = (article) => {
+  const postArticle = article => {
     axiosWithAuth().post(articlesUrl, article)
       .then(res => {
         setArticles([...articles, res.data.article])
@@ -95,7 +95,7 @@ export default function App() {
     }
   }
 
-  const updateArticle = (article_id) => {
+  const updateArticle = article_id => {
     setCurrentArticleId(article_id)
   }
 
