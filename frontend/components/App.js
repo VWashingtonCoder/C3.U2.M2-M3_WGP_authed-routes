@@ -57,7 +57,7 @@ export default function App() {
   }
 
   const deleteArticle = article_id => {
-    console.log('deleting', article_id)
+    axiosWithAuth().delete(articlesUrl)
   }
 
   const putArticle = (article_id, article) => {
