@@ -13,7 +13,7 @@ export default function App() {
   const [articles, setArticles] = useState([])
   const [message, setMessage] = useState('')
   const [currentArticleId, setCurrentArticleId] = useState(null)
-  const [fetching, setFetching] = useState(true)
+  const [fetching, setFetching] = useState(false)
 
   const navigate = useNavigate()
 
