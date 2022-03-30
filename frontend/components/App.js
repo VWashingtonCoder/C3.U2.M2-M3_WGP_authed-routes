@@ -57,7 +57,7 @@ export default function App() {
   }
 
   const deleteArticle = article_id => {
-    console.log('deleting')
+    console.log('deleting', article_id)
   }
 
   const putArticle = (article_id, article) => {
