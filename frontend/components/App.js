@@ -74,10 +74,10 @@ export default function App() {
     const { article_id, ...changes } = article
     axiosWithAuth().put(`${articlesUrl}/${article_id}`, changes)
       .then(res => {
-        
+        debugger
       })
       .catch(err => {
-
+        debugger
       })
   }
 
@@ -99,7 +99,7 @@ export default function App() {
         <Route path="articles" element={
           <>
             <ArticleForm
-              onSubmit={postArticle}
+              onSubmit={onSubmit}
               article={articles.find(art => art.article_id === currentArticleId)}
             />
             <Articles
