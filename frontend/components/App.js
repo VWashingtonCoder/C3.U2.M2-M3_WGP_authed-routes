@@ -86,7 +86,10 @@ export default function App() {
         <Route path="/" element={<LoginForm login={login} />} />
         <Route path="articles" element={
           <>
-            <ArticleForm onSubmit={postArticle} />
+            <ArticleForm
+              onSubmit={postArticle}
+              article={null}
+            />
             <Articles
               deleteArticle={deleteArticle}
               getArticles={getArticles}
