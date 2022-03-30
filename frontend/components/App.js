@@ -74,7 +74,8 @@ export default function App() {
     const { article_id, ...changes } = article
     axiosWithAuth().put(`${articlesUrl}/${article_id}`, changes)
       .then(res => {
-        setArticle()
+        setArticles()
+        setMessage(res.data.message)
       })
       .catch(err => {
         debugger
