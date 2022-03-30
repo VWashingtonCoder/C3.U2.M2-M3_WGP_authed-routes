@@ -7,7 +7,8 @@ export default function ArticleForm(props) {
   const { onSubmit, article } = props
 
   useEffect(() => {
-    // arbitrary
+    // if article, populate form with it
+    // otherwise populate form with intial values
   }, [article])
 
   const onChange = evt => {
